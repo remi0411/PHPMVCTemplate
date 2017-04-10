@@ -30,16 +30,18 @@ if(!isset($_REQUEST['uc']) || !$estConnecte) {
 }
 $uc = $_REQUEST['uc'];
 
+var_dump($uc);
 // C'est ici que nous recensons l'ensemble des controleurs de l'application
 switch($uc){
     case 'connexion':{
         include("controleurs/c_connexion.php");
         break;
     }
-    /*case 'gererFrais' :{
-        include("controleurs/c_gererFrais.php");
+    case 'accueil' :{
+        include("controleurs/c_accueil.php");
         break;
     }
+    /*
     case 'etatFrais' :{
         include("controleurs/c_etatFrais.php");
         break;

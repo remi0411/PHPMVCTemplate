@@ -29,6 +29,15 @@ switch($action){
      */
     case 'valideConnexion': {
         var_dump($_REQUEST);
+        if($_REQUEST["login"] == "pass"){
+            // Appel de la fonction connecter
+            header('Location:index.php?uc=accueil&action=bonjour');
+        }
+        else {
+            ajouterErreur("Login ou mot de passe incorrect");
+            include("vues/v_erreurs.php");
+            include("vues/v_connexion.php");
+        }
         break;
     }
     default :{
